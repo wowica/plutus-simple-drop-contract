@@ -14,6 +14,7 @@ See the following files:
 
 ## How to Run
 
+* If you haven't yet, be sure to [configure IOHK binary caches](https://github.com/input-output-hk/plutus-apps#iohk-binary-cache) in order to speed up the next step.
 * From the project root folder, run `nix-shell` to start a nix shell.
 * From inside the nix shell, type `cabal repl` to enter the cabal repl.
 * From inside the repl, type `import SimpleDrop.DeployDrop` and then `writeDropValidator`.
