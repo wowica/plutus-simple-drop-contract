@@ -2,24 +2,13 @@ cabal-version:      3.0
 name:               plutus-starter
 version:            0.1.0.0
 
--- A short (one-line) description of the package.
--- synopsis:
-
--- A longer description of the package.
--- description:
-
--- A URL where users can report bugs.
--- bug-reports:
+-- Plutus Smart Contract for the
+-- Simple Drop application
 
 license: Apache-2.0
 license-files: LICENSE
-author:             Your name
-maintainer:         Your email
-
--- A copyright notice.
--- copyright:
--- category:
--- extra-source-files: CHANGELOG.md
+author:             Carlos Souza
+maintainer:         carloshrsouza@gmail.com
 
 flag defer-plugin-errors
     description:
@@ -41,12 +30,13 @@ common lang
 library
     import: lang
     exposed-modules:
-      MyModule
-      Plutus.Contracts.Game
+      SimpleDrop.DropValidator
+      SimpleDrop.DeployDrop
     build-depends:
       base >= 4.9 && < 5,
       aeson -any,
       bytestring -any,
+      cardano-api -any,
       containers -any,
       freer-extras -any,
       playground-common -any,
@@ -57,9 +47,10 @@ library
       plutus-tx -any,
       plutus-tx-plugin -any,
       plutus-script-utils -any,
+      serialise -any,
       text -any,
       lens -any,
-    hs-source-dirs: src examples/src
+    hs-source-dirs: src
 
 test-suite plutus-example-projects-test
   import: lang
