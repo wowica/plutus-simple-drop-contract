@@ -64,4 +64,3 @@ valHash = Scripts.validatorHash . typedValidator
 
 scrAddress :: DropParam -> Ledger.Address
 scrAddress = scriptAddress . validator
-
