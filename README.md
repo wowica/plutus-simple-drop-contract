@@ -2,7 +2,7 @@
 
 This is a Plutus Smart Contract for the [Simple Drop dApp.](https://github.com/wowica/simple_drop)
 
-This contract reads a list of pub key hashes and stores them as part of the Datum. This is similiar to how "snapshots" are taken in order to whitelist participants for a future airdrop.
+This contract reads a list of pub key hashes from a text file and compiles them as part of the smart contract. This is similiar to how "snapshots" are taken in order to whitelist participants for a future airdrop.
 
 When trying to spend the UTXO that's part of this contract, the validation checks whether the signer of the transaction, passed via `--required-signer-hash`, is part of the whitelist.
 

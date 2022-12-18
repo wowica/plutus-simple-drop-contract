@@ -40,7 +40,7 @@ mkValidator p () () ctx = traceIfFalse "signatory not in Whitelist" isSignedByWL
     _listOfPubKeyHash = PlutusTx.Prelude.map (unPaymentPubKeyHash) (delegators p)
 
     -- Checks whether signatory of this transaction
-    -- is included on the WhiteList hardcoded in the Datum
+    -- is included on the WhiteList
     isSignedByWLDelegator :: Bool
     isSignedByWLDelegator = any (txSignedBy _transaction) $ _listOfPubKeyHash
 
